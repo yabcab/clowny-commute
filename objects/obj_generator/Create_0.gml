@@ -1,0 +1,9 @@
+newplat_oldx = 0
+newplat_dist = 200
+hazard_oldx = 0
+hazard_dist = 100
+gentype = 0
+gen_oldx = 0
+gen_dist = 100
+coin_oldx = 0
+coin_dist = 150
