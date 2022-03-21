@@ -3,7 +3,11 @@ if keyboard_check_pressed(vk_right)
 if keyboard_check_pressed(vk_left)
 	select--
 	
-scroll = select * 80
+//scroll = select * 80
+if abs(scroll - select * 80) > 1
+	scroll += (select * 80 - scroll) / 5
+else
+	scroll = select * 80
 
 if keyboard_check_pressed(ord("X"))
 {
@@ -29,8 +33,8 @@ switch select {
 	case 1: 
 	{
 		name = "Assorted Candies"
-		desc = "Holding right allows you to go faster"
-		cost = 10
+		desc = "A sugar rush means holding right will allow you to go faster"
+		cost = 25
 		
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
@@ -56,5 +60,63 @@ switch select {
 	}
 	break;
 	
+	case 3: 
+	{
+		name = "Four Salt Packets"
+		desc = "Press X in the air for a backwards dash (only works 4 times per run)"
+		cost = 15
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			backboosts = 4
+			purchased[select] = 1
+		}
+	}
+	break;
 	
+	case 4: 
+	{
+		name = "Outside Assistance"
+		desc = "Boberton is here to help (illegally), hitting him gives an extra boost of speed"
+		cost = 30
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			boberton = 1
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 5: 
+	{
+		name = "[placeholder item name]"
+		desc = "Much greater ability to slow down by holding left"
+		cost = 25
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			brakingpower = 1
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 6: 
+	{
+		name = "Bearded Ladybug's Glorious Philosophy"
+		desc = "Nolan will say something when you die [Does nothing currently]"
+		cost = 15
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			//brakingpower = 1
+			purchased[select] = 1
+		}
+	}
+	break;
 }

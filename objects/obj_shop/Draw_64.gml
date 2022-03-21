@@ -1,3 +1,5 @@
+draw_text_transformed_color(10,25,string(coins),1,1,0,c_white,c_white,c_white,c_white,1)
+
 var item
 for (item = 0; item < sprite_get_number(sprite_index); item++)
 {

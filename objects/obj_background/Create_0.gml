@@ -1,8 +1,8 @@
-col_r = 0
-col_g = 0
-col_b = 0
-targetcol_r = 255
-targetcol_g = 255
-targetcol_b = 255
+col_r = 48
+col_g = 69
+col_b = 194targetcol_r = 48
+targetcol_g = 69
+targetcol_b = 194
 image_xscale = 2000
 image_yscale = 2000
+depth = 100

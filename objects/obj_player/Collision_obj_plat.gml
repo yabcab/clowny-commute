@@ -7,4 +7,5 @@ if !other.used && !lost
 	else
 		vspeed = -7
 	other.used = 1
+	other.movein = 1
 }
