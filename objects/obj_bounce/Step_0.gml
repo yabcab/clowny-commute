@@ -15,5 +15,5 @@ if collected
 		instance_destroy()
 }
 
-if distance_to_object(obj_plat) < 35 || distance_to_object(obj_bounce) < 35
+if distance_to_object(obj_plat) < 35
 	instance_destroy()

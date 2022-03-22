@@ -4,9 +4,10 @@ globalvar coins; coins = 999
 globalvar max_obj_hits; max_obj_hits = 0
 globalvar can_rightboost; can_rightboost = 0
 globalvar extraboost; extraboost = 0
-globalvar backboosts; backboosts = 0;
+globalvar backboosts; backboosts = 0
 globalvar boberton; boberton = 0
 globalvar brakingpower; brakingpower = 0
+globalvar dropspeed; dropspeed = 0
 
 globalvar purchased; purchased = []
 var i;

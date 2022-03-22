@@ -1,15 +1,6 @@
 room_width = obj_player.x + 2000
 x = obj_player.x
 
-if distance_to_point(newplat_oldx,y) > newplat_dist
-{
-	var yy = random_range(50,300)
-	instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
-	instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
-	newplat_oldx = x	
-	newplat_dist = random_range(150,400)
-}
-
 if distance_to_point(hazard_oldx,y) > hazard_dist
 {
 	instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
@@ -17,7 +8,7 @@ if distance_to_point(hazard_oldx,y) > hazard_dist
 	hazard_dist = random_range(200,600)
 }
 
-if distance_to_point(bob_oldx,y) > bob_dist && boberton
+if distance_to_point(bob_oldx,y) > bob_dist && boberton >= 1
 {
 	instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_boberton)
 	bob_oldx = x	
@@ -26,14 +17,23 @@ if distance_to_point(bob_oldx,y) > bob_dist && boberton
 
 if distance_to_point(gen_oldx,y) > gen_dist
 {
-	gentype = choose(0,1,2)
+	gentype = choose(1,1,1)
 	gen_oldx = x	
 	gen_dist = random_range(2000,5000)
 }
 switch gentype 
 {
-	case 0:
+	case 0: // light blue
 	{
+		if distance_to_point(newplat_oldx,y) > newplat_dist
+		{
+			var yy = random_range(50,340)
+			instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
+			instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+			newplat_oldx = x	
+			newplat_dist = random_range(150,400)
+		}
+		
 		with obj_background
 		{
 			targetcol_r = 48
@@ -43,8 +43,32 @@ switch gentype
 	}
 	break;
 	
-	case 1:
+	case 1: // crimson
 	{
+		if distance_to_point(newplat_oldx,y) > newplat_dist
+		{
+			var yy = random_range(50,340)
+			var pick = choose(1,2)
+			switch pick 
+			{
+				case 1:
+				{
+					instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
+					instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+				}
+				break;
+					
+				case 2:
+				{
+					instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+					instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+					instance_create_depth(obj_player.x + 640 + random_range(-100,100),random_range(50,250),-1,obj_coin)
+				}
+			}
+			newplat_oldx = x	
+			newplat_dist = random_range(150,400)
+		}
+		
 		with obj_background
 		{
 			targetcol_r = 100

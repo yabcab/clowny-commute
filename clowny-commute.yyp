@@ -25,6 +25,7 @@
     {"id":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},"order":6,},
     {"id":{"name":"funcs","path":"scripts/funcs/funcs.yy",},"order":0,},
     {"id":{"name":"mu_game_2","path":"sounds/mu_game_2/mu_game_2.yy",},"order":2,},
+    {"id":{"name":"obj_bounce","path":"objects/obj_bounce/obj_bounce.yy",},"order":12,},
     {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},"order":0,},
     {"id":{"name":"sfx_hit","path":"sounds/sfx_hit/sfx_hit.yy",},"order":10,},
     {"id":{"name":"spr_lostmenuicons","path":"sprites/spr_lostmenuicons/spr_lostmenuicons.yy",},"order":12,},

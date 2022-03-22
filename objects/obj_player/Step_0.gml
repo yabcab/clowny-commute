@@ -32,39 +32,103 @@ if going
 			hspeed = lerp(hspeed,5,0.1)
 		if keyboard_check_pressed(ord("X")) && backs > 0
 		{
-			saltanim = 1
-			backs--
-			hspeed = -10
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
-			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			if keyboard_check(vk_up)
+			{
+				vspeed = -7
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(0,180) }
+			}
+			
+			if keyboard_check(vk_left)
+			{
+				saltanim = 1
+				backs--
+				hspeed = -10
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				if !keyboard_check(vk_up)
+				{
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+				}
+			}
+			else
+			{
+				saltanim = 1
+				backs--
+				hspeed = 10
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				if !keyboard_check(vk_up)
+				{
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+					with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
+				}
+			}
 		}
 		if hspeed > 5.75 || hspeed < 3
 			with instance_create_depth(x,y,depth + 1,obj_speedeffect)
@@ -79,7 +143,9 @@ if going
 			vspeed += gravamount
 		if keyboard_check(vk_down)
 			vspeed += gravamount
-		if keyboard_check_released(ord("Z")) && vspeed < -3
+		if keyboard_check(vk_down) && dropspeed
+			vspeed += gravamount
+		if keyboard_check_released(ord("Z")) && vspeed < -3 && bouncing
 			vspeed = -3
 
 		if y > room_height + 64

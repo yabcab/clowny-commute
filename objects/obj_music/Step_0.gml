@@ -10,7 +10,10 @@ else
 {
 	if !obj_player.lost
 	{
-		pitch = 1
+		if pitch < 1
+			pitch += 0.05
+		else
+			pitch = 1
 		audio_sound_pitch(levelmusic,1)
 		if obj_player.going
 		{
@@ -28,6 +31,7 @@ else
 		audio_sound_gain(shop,0.,0)
 		audio_sound_gain(levelmusic,0.1,600)
 		audio_sound_pitch(levelmusic,pitch)
-		pitch -= 0.005
+		if pitch > -0.01
+			pitch -= 0.005
 	}
 }

@@ -63,13 +63,13 @@ switch select {
 	case 3: 
 	{
 		name = "Four Salt Packets"
-		desc = "Press X in the air for a backwards dash (only works 4 times per run)"
-		cost = 15
+		desc = "Press X in the air for a dash depending on what direction you are holding (only works 4 times per run)"
+		cost = 25
 		
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			backboosts = 4
+			backboosts += 4
 			purchased[select] = 1
 		}
 	}
@@ -84,7 +84,7 @@ switch select {
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			boberton = 1
+			boberton++
 			purchased[select] = 1
 		}
 	}
@@ -108,7 +108,7 @@ switch select {
 	case 6: 
 	{
 		name = "Bearded Ladybug's Glorious Philosophy"
-		desc = "Nolan will say something when you die [Does nothing currently]"
+		desc = "Nolan will say something when you die [p]"
 		cost = 15
 		
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
@@ -130,6 +130,81 @@ switch select {
 		{
 			coins -= cost
 			max_obj_hits++
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 8: 
+	{
+		name = "Dana's Front Porch Stone"
+		desc = "Holding down allows you to drop faster [p]"
+		cost = 25
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			dropspeed = 1
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 9: 
+	{
+		name = "Worm in jar"
+		desc = "Ring worms in a jar. Fire them at objects with [undecided key] to destroy them [p]"
+		cost = infinity
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			//max_obj_hits++
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 10: 
+	{
+		name = "Assorted Twice Roast Bamboo Salts"
+		desc = "Very expensive, but provides 4 extra salt boosts per run"
+		cost = 50
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			backboosts += 4
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 11: 
+	{
+		name = "Boberchain Mandate"
+		desc = "Bobertons have a chance to chain together to make Boberton chains"
+		cost = 30
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			boberton++
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 12: 
+	{
+		name = "Literally just steal from Abrianna"
+		desc = "More valuble items will appear along side coins"
+		cost = 65
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			//backboosts += 4
 			purchased[select] = 1
 		}
 	}
