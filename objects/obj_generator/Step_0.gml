@@ -1,4 +1,4 @@
-room_width = obj_player.x + 640
+room_width = obj_player.x + 2000
 x = obj_player.x
 
 if distance_to_point(newplat_oldx,y) > newplat_dist
@@ -7,14 +7,14 @@ if distance_to_point(newplat_oldx,y) > newplat_dist
 	instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
 	instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
 	newplat_oldx = x	
-	newplat_dist = random_range(200,500)
+	newplat_dist = random_range(150,400)
 }
 
 if distance_to_point(hazard_oldx,y) > hazard_dist
 {
 	instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
 	hazard_oldx = x	
-	hazard_dist = random_range(300,700)
+	hazard_dist = random_range(200,600)
 }
 
 if distance_to_point(bob_oldx,y) > bob_dist && boberton

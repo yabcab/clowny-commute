@@ -1,0 +1,1 @@
+draw_text_transformed(x,y,"What you are playing is a VERY work in progress version of Clowny Commute.\n\nNOTHING is final\nANYTHING can change\n\nRemember, most things in this game are missing graphics and visual effects. The game is to be completed and released April 1st, 2022.\n\nPress Z to continue.",0.5,0.5,0)

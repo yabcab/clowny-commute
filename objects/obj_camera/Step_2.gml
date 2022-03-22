@@ -1,1 +1,1 @@
-x = obj_player.x + 200
+x = obj_player.x + 150 - obj_player.hspeed

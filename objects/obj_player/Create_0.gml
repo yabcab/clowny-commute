@@ -6,6 +6,7 @@ objhits = max_obj_hits
 fallboost = extraboost
 backs = backboosts
 coinpitch = 1
+upeffect = 0
 
 if keyboard_check(ord("Z"))
 {
@@ -19,3 +20,7 @@ display_set_gui_size(640,360)
 depth = -1
 
 audio_stop_sound(sfx_fall)
+
+bouncing = 0
+saltanim = 0
+bobanim = 0

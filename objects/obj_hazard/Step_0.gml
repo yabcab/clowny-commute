@@ -14,3 +14,6 @@ if collected
 	if image_alpha < 0
 		instance_destroy()
 }
+
+if distance_to_object(obj_plat) < 50
+	instance_destroy()

@@ -1,6 +1,13 @@
 function new_gamemusic()
 {
-	levelmusic = audio_play_sound(choose(mu_game_1,mu_game_2),1,0)
+	randomize()
+	var i = irandom_range(1,4)
+	switch i {
+		case 1: { levelmusic = audio_play_sound(mu_game_1,1,0) } break;
+		case 2: { levelmusic = audio_play_sound(mu_game_2,1,0) } break;
+		case 3: { levelmusic = audio_play_sound(mu_game_3,1,0) } break;
+		case 4: { levelmusic = audio_play_sound(mu_game_4,1,0) } break;
+	}
 }
 
 function pal_swap_set() {

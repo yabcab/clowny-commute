@@ -4,11 +4,26 @@ if going
 {
 	if lost
 	{
+		sprite_index = spr_player_death
 		hspeed = lerp(hspeed,0,0.05)
 		vspeed = lerp(vspeed,0,0.1)
 	}
 	else
 	{
+		if bouncing
+			sprite_index = spr_player_bounce
+		else if bobanim
+			sprite_index = spr_player_bobertonboost
+		else if saltanim
+			sprite_index = spr_player_salt
+		else
+			sprite_index = spr_player_inair
+		
+		if upeffect
+			instance_create_depth(x,y + 32,depth - 2,obj_explosionpart)
+		if vspeed > -3
+			upeffect = 0
+		
 		if keyboard_check(vk_right)	&& can_rightboost
 			hspeed = lerp(hspeed,6,0.1)
 		else if keyboard_check(vk_left)
@@ -17,8 +32,39 @@ if going
 			hspeed = lerp(hspeed,5,0.1)
 		if keyboard_check_pressed(ord("X")) && backs > 0
 		{
+			saltanim = 1
 			backs--
-			hspeed = -8
+			hspeed = -10
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
+			with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
 		}
 		if hspeed > 5.75 || hspeed < 3
 			with instance_create_depth(x,y,depth + 1,obj_speedeffect)
@@ -50,7 +96,20 @@ if going
 				while y > room_height
 					y--
 				vspeed = -13
+				bouncing = 1
+				image_index = 0
 				fallboost = 0
+				upeffect = 1
+				audio_play_sound(sfx_extraboost,1,0)
+				audio_play_sound(sfx_slidewhistle,1,0)
+				with instance_create_depth(x,y,depth - 1,obj_gib) { sprite_index = spr_crayons; image_index = choose(1,2,3,4) }
+				with instance_create_depth(x,y,depth - 1,obj_gib) { sprite_index = spr_crayons; image_index = choose(1,2,3,4) }
+				with instance_create_depth(x,y,depth - 1,obj_gib) { sprite_index = spr_crayons; image_index = choose(1,2,3,4) }
+				with instance_create_depth(x,y,depth - 1,obj_gib) { sprite_index = spr_crayons; image_index = choose(1,2,3,4) }
+				with instance_create_depth(x,y,depth - 1,obj_gib) { sprite_index = spr_crayons; image_index = choose(1,2,3,4) }
+				with instance_create_depth(x,y,depth - 1,obj_gib) { sprite_index = spr_crayons; image_index = choose(1,2,3,4) }
+				with instance_create_depth(x,y,depth - 1,obj_gib) { sprite_index = spr_crayons; image_index = choose(1,2,3,4) }
+				with instance_create_depth(x,y,depth - 1,obj_gib) { sprite_index = spr_crayons; image_index = choose(1,2,3,4) }
 			}
 		}
 	}

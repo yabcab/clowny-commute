@@ -119,4 +119,19 @@ switch select {
 		}
 	}
 	break;
+	
+	case 7: 
+	{
+		name = "Another Hair Poof"
+		desc = "Allows you to another object and survive"
+		cost = 40
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			max_obj_hits++
+			purchased[select] = 1
+		}
+	}
+	break;
 }
