@@ -1,12 +1,28 @@
 randomize()
 
+score = floor(x) - 96
 if going
 {
+	if x > milestone_to_reach
+	{
+		audio_play_sound(sfx_10k_1,1,0)
+		milestone_to_reach += 10000	
+		instance_create_depth(320,-250,-5,obj_10k)
+	}
+	
 	if lost
 	{
 		sprite_index = spr_player_death
 		hspeed = lerp(hspeed,0,0.05)
 		vspeed = lerp(vspeed,0,0.1)
+		if score > highscore
+		{
+			highscore = score
+			ini_open("save.lmao")
+			ini_write_real("data","highscore",highscore)
+			ini_close()
+			obj_lostmenu.got_hs = 1
+		}
 	}
 	else
 	{
@@ -32,6 +48,11 @@ if going
 			hspeed = lerp(hspeed,5,0.1)
 		if keyboard_check_pressed(ord("X")) && backs > 0
 		{
+			if angrysalt
+			{
+				hazardimmune = 1
+				alarm[1] = 30
+			}
 			if keyboard_check(vk_up)
 			{
 				vspeed = -7
@@ -95,7 +116,7 @@ if going
 			{
 				saltanim = 1
 				backs--
-				hspeed = 10
+				hspeed = 13
 				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
 				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
 				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
@@ -164,7 +185,7 @@ if going
 				vspeed = -13
 				bouncing = 1
 				image_index = 0
-				fallboost = 0
+				fallboost--
 				upeffect = 1
 				audio_play_sound(sfx_extraboost,1,0)
 				audio_play_sound(sfx_slidewhistle,1,0)

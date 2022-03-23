@@ -15,6 +15,11 @@ if bring_opt3
 	opt3_off = lerp(opt3_off,0,0.5)
 	opt3_a = lerp(opt3_a,1,0.2)
 }
+if bring_hs
+{
+	hs_off = lerp(hs_off,0,0.5)
+	hs_a = lerp(hs_a,1,0.2)
+}
 
 
 if sel1 = c_lime

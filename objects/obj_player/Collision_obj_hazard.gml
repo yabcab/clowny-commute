@@ -1,8 +1,9 @@
 if !lost
 {
 	audio_play_sound(sfx_hit,1,0)
-	objhits--
-	if objhits < 0
+	if !hazardimmune
+		objhits--
+	if objhits < 0 && !hazardimmune
 	{
 		audio_play_sound(sfx_hit2,1,0)
 		lost = 1

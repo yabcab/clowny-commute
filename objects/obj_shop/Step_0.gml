@@ -54,7 +54,7 @@ switch select {
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			extraboost = 1
+			extraboost++
 			purchased[select] = 1
 		}
 	}
@@ -137,8 +137,8 @@ switch select {
 	
 	case 8: 
 	{
-		name = "Dana's Front Porch Stone"
-		desc = "Holding down allows you to drop faster [p]"
+		name = "Strong Man's Weight"
+		desc = "Holding down allows you to drop faster (faster than strong man loses his temper)"
 		cost = 25
 		
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
@@ -152,14 +152,14 @@ switch select {
 	
 	case 9: 
 	{
-		name = "Worm in jar"
-		desc = "Ring worms in a jar. Fire them at objects with [undecided key] to destroy them [p]"
-		cost = infinity
+		name = "Anger"
+		desc = "Salt dashes will also deflect objects that would normally damage you"
+		cost = 45
 		
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			//max_obj_hits++
+			angrysalt = 1
 			purchased[select] = 1
 		}
 	}
@@ -167,7 +167,7 @@ switch select {
 	
 	case 10: 
 	{
-		name = "Assorted Twice Roast Bamboo Salts"
+		name = "Assorted Nine Times Roast Bamboo Salts"
 		desc = "Very expensive, but provides 4 extra salt boosts per run"
 		cost = 50
 		
@@ -204,7 +204,52 @@ switch select {
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			//backboosts += 4
+			valubleitems = 1
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 13: 
+	{
+		name = "Aidang's Curse"
+		desc = "Your death will be censored"
+		cost = 25
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			//valubleitems = 1
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 14: 
+	{
+		name = "Crayola Endorsement"
+		desc = "Survive yet another fall to your death"
+		cost = 70
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			extraboost++
+			purchased[select] = 1
+		}
+	}
+	break;
+	
+	case 15: 
+	{
+		name = "Pain AND Gain"
+		desc = "Get a speed boost when taking damage"
+		cost = 55
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			//extraboost++
 			purchased[select] = 1
 		}
 	}

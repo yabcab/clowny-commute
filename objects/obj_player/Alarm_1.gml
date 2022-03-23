@@ -1,0 +1,1 @@
+hazardimmune = 0

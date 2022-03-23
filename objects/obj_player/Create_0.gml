@@ -7,6 +7,8 @@ fallboost = extraboost
 backs = backboosts
 coinpitch = 1
 upeffect = 0
+hazardimmune = 0
+milestone_to_reach = 10000
 
 if keyboard_check(ord("Z"))
 {
