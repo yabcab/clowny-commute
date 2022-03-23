@@ -63,3 +63,23 @@ function draw_self_shadowed() {
 	shader_reset()
 	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 }
+
+function draw_text_outline(x,y,str,xs,ys,rot,out_col,in_col,out_size,corners)
+{
+	var col = draw_get_color()
+	draw_set_color(out_col)
+	draw_text_transformed(x + out_size,y,str,xs,ys,rot)
+	draw_text_transformed(x - out_size,y,str,xs,ys,rot)
+	draw_text_transformed(x,y + out_size,str,xs,ys,rot)
+	draw_text_transformed(x,y - out_size,str,xs,ys,rot)
+	if corners
+	{
+		draw_text_transformed(x + out_size,y + out_size,str,xs,ys,rot)
+		draw_text_transformed(x - out_size,y + out_size,str,xs,ys,rot)
+		draw_text_transformed(x + out_size,y - out_size,str,xs,ys,rot)
+		draw_text_transformed(x - out_size,y - out_size,str,xs,ys,rot)
+	}
+	draw_set_color(in_col)
+	draw_text_transformed(x,y,str,xs,ys,rot)
+	draw_set_color(col)
+}

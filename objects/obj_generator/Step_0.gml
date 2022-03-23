@@ -1,13 +1,6 @@
 room_width = obj_player.x + 2000
 x = obj_player.x
 
-if distance_to_point(hazard_oldx,y) > hazard_dist
-{
-	instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
-	hazard_oldx = x	
-	hazard_dist = random_range(200,600)
-}
-
 if distance_to_point(bob_oldx,y) > bob_dist && boberton >= 1
 {
 	instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_boberton)
@@ -25,6 +18,13 @@ switch gentype
 {
 	case 0: // light blue
 	{
+		if distance_to_point(hazard_oldx,y) > hazard_dist
+		{
+			instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
+			hazard_oldx = x	
+			hazard_dist = random_range(200,600)
+		}
+		
 		if distance_to_point(newplat_oldx,y) > newplat_dist
 		{
 			var yy = random_range(50,300)
@@ -45,6 +45,13 @@ switch gentype
 	
 	case 1: // crimson
 	{
+		if distance_to_point(hazard_oldx,y) > hazard_dist
+		{
+			instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
+			hazard_oldx = x	
+			hazard_dist = random_range(200,600)
+		}
+		
 		if distance_to_point(newplat_oldx,y) > newplat_dist
 		{
 			var yy = random_range(50,300)
@@ -80,6 +87,13 @@ switch gentype
 	
 	case 2: // green
 	{
+		if distance_to_point(hazard_oldx,y) > hazard_dist
+		{
+			instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
+			hazard_oldx = x	
+			hazard_dist = random_range(200,600)
+		}
+		
 		if distance_to_point(newplat_oldx,y) > newplat_dist
 		{
 			var yy = random_range(50,300)
@@ -102,13 +116,22 @@ switch gentype
 	
 	case 3: // yellow
 	{
+		if distance_to_point(hazard_oldx,y) > hazard_dist
+		{
+			instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,300),-1,obj_hazard)
+			//instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,280),-1,obj_hazard)
+			hazard_oldx = x	
+			hazard_dist = random_range(150,400)
+		}
+		
 		if distance_to_point(newplat_oldx,y) > newplat_dist
 		{
-			var yy = random_range(50,300)
-			instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
+			var yy = 300
+			if !instance_exists(obj_followplat)
+				instance_create_depth(obj_player.x + 640,yy,-1,obj_followplat)
 			instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
 			newplat_oldx = x	
-			newplat_dist = random_range(150,400)
+			newplat_dist = random_range(100,500)
 		}
 		
 		with obj_background
@@ -122,6 +145,13 @@ switch gentype
 	
 	case 4: // pink
 	{
+		if distance_to_point(hazard_oldx,y) > hazard_dist
+		{
+			instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
+			hazard_oldx = x	
+			hazard_dist = random_range(200,600)
+		}
+		
 		if distance_to_point(newplat_oldx,y) > newplat_dist
 		{
 			var yy = random_range(50,300)

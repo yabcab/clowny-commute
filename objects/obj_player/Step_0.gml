@@ -1,5 +1,13 @@
 randomize()
 
+if keyboard_check_pressed(ord("P")) && canduck
+{
+	if duck = 0
+		duck = 1
+	else
+		duck = 0
+}
+
 score = floor(x) - 96
 if going
 {
@@ -158,6 +166,8 @@ if going
 				image_index = other.image_index
 				image_speed = 0
 				image_alpha = 0.5
+				if duck
+					sprite_index = spr_duckspeedfx
 			}
 	
 		if vspeed < grav
@@ -217,3 +227,5 @@ else
 	}
 }
 
+if duck
+	sprite_index = spr_specialduck

@@ -242,14 +242,14 @@ switch select {
 	
 	case 15: 
 	{
-		name = "Pain AND Gain"
-		desc = "Get a speed boost when taking damage"
-		cost = 55
+		name = "Special Duck Mode"
+		desc = "Press P to toggle Duck Mode"
+		cost = 40
 		
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			//extraboost++
+			canduck = 1
 			purchased[select] = 1
 		}
 	}
