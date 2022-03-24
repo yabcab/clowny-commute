@@ -36,6 +36,8 @@ if !other.lost
 	audio_play_sound(sfx_dash,1,0)
 	with other
 	{
+		hazardimmune = 1
+		alarm[1] = 30
 		vspeed = -3
 		hspeed = 20
 		bobanim = 1

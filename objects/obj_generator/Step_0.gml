@@ -10,7 +10,7 @@ if distance_to_point(bob_oldx,y) > bob_dist && boberton >= 1
 
 if distance_to_point(gen_oldx,y) > gen_dist
 {
-	gentype = choose(0,1,2,3,4)
+	gentype = irandom_range(1,7)
 	gen_oldx = x	
 	gen_dist = random_range(2000,5000)
 }
@@ -31,7 +31,7 @@ switch gentype
 			instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
 			instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
 			newplat_oldx = x	
-			newplat_dist = random_range(150,400)
+			newplat_dist = random_range(150,350)
 		}
 		
 		with obj_background
@@ -149,6 +149,33 @@ switch gentype
 		{
 			instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
 			hazard_oldx = x	
+			hazard_dist = random_range(300,700)
+		}
+		
+		if distance_to_point(newplat_oldx,y) > newplat_dist
+		{
+			var yy = random_range(50,300)
+			instance_create_depth(obj_player.x + 640,yy,-1,obj_slantplat)
+			instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+			newplat_oldx = x	
+			newplat_dist = random_range(150,350)
+		}
+		
+		with obj_background
+		{
+			targetcol_r = 255
+			targetcol_g = 138
+			targetcol_b = 245
+		}
+	}
+	break;
+	
+	case 5: // orange
+	{
+		if distance_to_point(hazard_oldx,y) > hazard_dist
+		{
+			instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
+			hazard_oldx = x	
 			hazard_dist = random_range(200,600)
 		}
 		
@@ -158,14 +185,104 @@ switch gentype
 			instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
 			instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
 			newplat_oldx = x	
-			newplat_dist = random_range(150,400)
+			newplat_dist = random_range(150,350)
 		}
 		
 		with obj_background
 		{
 			targetcol_r = 255
-			targetcol_g = 139
-			targetcol_b = 218
+			targetcol_g = 150
+			targetcol_b = 78
+		}
+	}
+	break;
+	
+	case 6: // midnight
+	{
+		if distance_to_point(hazard_oldx,y) > hazard_dist
+		{
+			instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
+			hazard_oldx = x	
+			hazard_dist = random_range(400,800)
+		}
+		
+		var choice = choose(1,2,3)
+		switch choice
+		{
+			case 1:
+			{
+				if distance_to_point(newplat_oldx,y) > newplat_dist
+				{
+					var yy = random_range(50,300)
+					instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
+					instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+					newplat_oldx = x	
+					newplat_dist = random_range(150,350)
+				}
+			}
+			break;
+			
+			case 2:
+			{
+				if distance_to_point(newplat_oldx,y) > newplat_dist
+				{
+					var yy = random_range(50,300)
+					instance_create_depth(obj_player.x + 640,yy,-1,obj_slantplat)
+					instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+					newplat_oldx = x	
+					newplat_dist = random_range(150,350)
+				}	
+			}
+			break;
+			
+			case 3:
+			{
+				if distance_to_point(newplat_oldx,y) > newplat_dist
+				{
+					var yy = random_range(50,300)
+					var coin = choose(0,1)
+					with instance_create_depth(obj_player.x + 640,yy,-1,obj_plat) { sprite_index = spr_halfplat }
+					if coin
+						instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+					newplat_oldx = x	
+					newplat_dist = random_range(75,150)
+				}
+			}
+			break;
+		}
+		
+		with obj_background
+		{
+			targetcol_r = 0
+			targetcol_g = 9
+			targetcol_b = 67
+		}
+	}
+	break;
+	
+	case 7: // purple
+	{
+		if distance_to_point(hazard_oldx,y) > hazard_dist
+		{
+			instance_create_depth(obj_player.x + 640,random_range(50,300),-1,obj_hazard)
+			hazard_oldx = x	
+			hazard_dist = random_range(200,600)
+		}
+		
+		if distance_to_point(newplat_oldx,y) > newplat_dist
+		{
+			var yy = random_range(50,300)
+			instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
+			instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+			newplat_oldx = x	
+			newplat_dist = random_range(150,350)
+		}
+		
+		with obj_background
+		{
+			targetcol_r = 125
+			targetcol_g = 30
+			targetcol_b = 161
 		}
 	}
 	break;

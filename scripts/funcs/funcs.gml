@@ -8,6 +8,7 @@ function new_gamemusic()
 		case 3: { levelmusic = audio_play_sound(mu_game_3,1,0) } break;
 		case 4: { levelmusic = audio_play_sound(mu_game_4,1,0) } break;
 	}
+	audio_sound_gain(levelmusic,0,0)
 }
 
 function pal_swap_set() {

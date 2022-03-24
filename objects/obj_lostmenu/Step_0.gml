@@ -59,3 +59,14 @@ if sel3 = c_lime
 		
 	keyboard_clear(vk_down)
 }
+
+if !control && keyboard_check_pressed(ord("Z"))
+{
+	bring_opt1 = 1
+	bring_opt2 = 1
+	bring_opt3 = 1
+	if got_hs
+		bring_hs = 1
+	
+	sel1 = c_lime
+}

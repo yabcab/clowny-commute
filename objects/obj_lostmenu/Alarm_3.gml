@@ -1,1 +1,3 @@
-sel1 = c_lime
+if !control
+	sel1 = c_lime
+control = 1

@@ -254,4 +254,19 @@ switch select {
 		}
 	}
 	break;
+	
+	case 16: 
+	{
+		name = "Big Ass Trophy"
+		desc = "This does nothing except show how rich you are. Money money money!!"
+		cost = 9999
+		
+		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
+		{
+			coins -= cost
+			//canduck = 1
+			purchased[select] = 1
+		}
+	}
+	break;
 }

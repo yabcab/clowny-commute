@@ -7,6 +7,7 @@
     {"id":{"name":"spr_bonegib","path":"sprites/spr_bonegib/spr_bonegib.yy",},"order":11,},
     {"id":{"name":"obj_background","path":"objects/obj_background/obj_background.yy",},"order":0,},
     {"id":{"name":"shd_pal","path":"shaders/shd_pal/shd_pal.yy",},"order":0,},
+    {"id":{"name":"obj_slantplat","path":"objects/obj_slantplat/obj_slantplat.yy",},"order":14,},
     {"id":{"name":"spr_player_bounce","path":"sprites/spr_player_bounce/spr_player_bounce.yy",},"order":1,},
     {"id":{"name":"spr_duckspeedfx","path":"sprites/spr_duckspeedfx/spr_duckspeedfx.yy",},"order":20,},
     {"id":{"name":"spr_deaththings2","path":"sprites/spr_deaththings2/spr_deaththings2.yy",},"order":10,},
