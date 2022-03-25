@@ -84,3 +84,4 @@ function draw_text_outline(x,y,str,xs,ys,rot,out_col,in_col,out_size,corners)
 	draw_text_transformed(x,y,str,xs,ys,rot)
 	draw_set_color(col)
 }
+

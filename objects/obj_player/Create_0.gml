@@ -9,14 +9,14 @@ coinpitch = 1
 upeffect = 0
 hazardimmune = 0
 milestone_to_reach = 10000
-spd2 = 1
+spd2 = 0
 
-if keyboard_check(ord("Z"))
-{
-	going = 1
-	audio_play_sound(sfx_begin,1,0)	
-	hspeed = 10
-}
+//if keyboard_check(ord("Z"))
+//{
+//	going = 1
+//	audio_play_sound(sfx_begin,1,0)	
+//	hspeed = 10
+//}
 	
 display_set_gui_size(640,360)
 

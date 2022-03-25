@@ -183,10 +183,12 @@ switch gentype
 		if distance_to_point(newplat_oldx,y) > newplat_dist
 		{
 			var yy = random_range(50,300)
-			instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
-			instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
-			newplat_oldx = x	
-			newplat_dist = random_range(150,350)
+			instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+			instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+			instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+			instance_create_depth(obj_player.x + 640 + random_range(-100,100),random_range(50,250),-1,obj_coin)
+			newplat_oldx = x
+			newplat_dist = random_range(150,300)
 		}
 		
 		with obj_background
@@ -287,10 +289,26 @@ switch gentype
 		if distance_to_point(newplat_oldx,y) > newplat_dist
 		{
 			var yy = random_range(50,300)
-			instance_create_depth(obj_player.x + 640,yy,-1,obj_plat)
-			instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+			var pick = choose(1,2)
+			switch pick 
+			{
+				case 1:
+				{
+					instance_create_depth(obj_player.x + 640,yy,-1,obj_slantplat)
+					instance_create_depth(obj_player.x + 640 + random_range(-100,100),yy - random_range(20,100),-1,obj_coin)
+				}
+				break;
+					
+				case 2:
+				{
+					instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+					instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+					instance_create_depth(obj_player.x + 640 + random_range(-100,100),random_range(50,250),-1,obj_coin)
+				}
+				break;
+			}
 			newplat_oldx = x	
-			newplat_dist = random_range(150,350)
+			newplat_dist = random_range(150,300)
 		}
 		
 		with obj_background

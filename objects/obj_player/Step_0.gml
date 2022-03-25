@@ -20,6 +20,7 @@ if going
 	
 	if lost
 	{
+		spd2 = 0
 		sprite_index = spr_player_death
 		hspeed = lerp(hspeed,0,0.05)
 		vspeed = lerp(vspeed,0,0.1)
@@ -160,6 +161,7 @@ if going
 			}
 		}
 		if hspeed > 5.75 || hspeed < 3
+		{
 			with instance_create_depth(x,y,depth + 1,obj_speedeffect)
 			{
 				sprite_index = other.sprite_index
@@ -169,6 +171,11 @@ if going
 				if duck
 					sprite_index = spr_duckspeedfx
 			}
+		}
+		if hspeed > 5.75
+			spd2 = 1
+		else
+			spd2 = 0
 	
 		if vspeed < grav
 			vspeed += gravamount

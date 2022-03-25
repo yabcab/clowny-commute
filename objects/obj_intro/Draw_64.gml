@@ -1,0 +1,1 @@
+draw_text_outline(10,325,"Z: Select",1,1,0,c_white,c_black,1,0)

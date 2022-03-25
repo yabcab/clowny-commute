@@ -1,2 +1,4 @@
-if control && keyboard_check_pressed(ord("X"))
-	room_goto(rm_init)
+if control
+	image_alpha -= 0.1
+if image_alpha < 0
+	instance_destroy()

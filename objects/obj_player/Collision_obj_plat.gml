@@ -1,10 +1,7 @@
 if !other.used && !lost
-{
-	if !bouncing
-	{
-		bouncing = 1
-		image_index = 0
-	}
+{	
+	image_index = 0
+	bouncing = 1
 	if keyboard_check(ord("Z")) && vspeed > -10
 		vspeed = -10
 	else if keyboard_check(vk_down) && vspeed > -5

@@ -25,6 +25,7 @@ for (i = 0; i < 50; i++)
 
 pal_swap_init_system(shd_pal)
 draw_set_font(fnt_text)
+display_set_gui_size(640,360)
 room_goto(rm_game)
 
 enum effects 

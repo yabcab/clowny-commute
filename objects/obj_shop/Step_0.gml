@@ -92,7 +92,7 @@ switch select {
 	
 	case 5: 
 	{
-		name = "[placeholder item name]"
+		name = "Dana's Porch Stone"
 		desc = "Much greater ability to slow down by holding left"
 		cost = 25
 		
