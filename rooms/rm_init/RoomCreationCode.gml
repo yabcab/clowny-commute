@@ -24,6 +24,7 @@ for (i = 0; i < 50; i++)
 	purchased[i] = 0
 
 pal_swap_init_system(shd_pal)
+draw_set_font(fnt_text)
 room_goto(rm_game)
 
 enum effects 

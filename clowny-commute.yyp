@@ -3,6 +3,7 @@
     {"id":{"name":"obj_hazard","path":"objects/obj_hazard/obj_hazard.yy",},"order":4,},
     {"id":{"name":"spr_boberton","path":"sprites/spr_boberton/spr_boberton.yy",},"order":5,},
     {"id":{"name":"spr_hazardremove","path":"sprites/spr_hazardremove/spr_hazardremove.yy",},"order":3,},
+    {"id":{"name":"spr_speedfx2","path":"sprites/spr_speedfx2/spr_speedfx2.yy",},"order":21,},
     {"id":{"name":"obj_boberton","path":"objects/obj_boberton/obj_boberton.yy",},"order":7,},
     {"id":{"name":"spr_bonegib","path":"sprites/spr_bonegib/spr_bonegib.yy",},"order":11,},
     {"id":{"name":"obj_background","path":"objects/obj_background/obj_background.yy",},"order":0,},
@@ -22,6 +23,7 @@
     {"id":{"name":"spr_bgsquare","path":"sprites/spr_bgsquare/spr_bgsquare.yy",},"order":6,},
     {"id":{"name":"sfx_dash","path":"sounds/sfx_dash/sfx_dash.yy",},"order":8,},
     {"id":{"name":"spr_player_bobertonboost","path":"sprites/spr_player_bobertonboost/spr_player_bobertonboost.yy",},"order":3,},
+    {"id":{"name":"obj_speedfx2","path":"objects/obj_speedfx2/obj_speedfx2.yy",},"order":15,},
     {"id":{"name":"sfx_begin","path":"sounds/sfx_begin/sfx_begin.yy",},"order":6,},
     {"id":{"name":"obj_explosionpart","path":"objects/obj_explosionpart/obj_explosionpart.yy",},"order":11,},
     {"id":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},"order":6,},
@@ -62,6 +64,7 @@
     {"id":{"name":"mu_game_1","path":"sounds/mu_game_1/mu_game_1.yy",},"order":1,},
     {"id":{"name":"obj_followplat","path":"objects/obj_followplat/obj_followplat.yy",},"order":13,},
     {"id":{"name":"spr_shopiconplaceholders","path":"sprites/spr_shopiconplaceholders/spr_shopiconplaceholders.yy",},"order":4,},
+    {"id":{"name":"fnt_text","path":"fonts/fnt_text/fnt_text.yy",},"order":0,},
     {"id":{"name":"spr_crayons","path":"sprites/spr_crayons/spr_crayons.yy",},"order":13,},
     {"id":{"name":"obj_gib","path":"objects/obj_gib/obj_gib.yy",},"order":10,},
     {"id":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},"order":5,},
@@ -99,8 +102,8 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_disclaimer","path":"rooms/rm_disclaimer/rm_disclaimer.yy",},},
-    {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"roomId":{"name":"rm_shop","path":"rooms/rm_shop/rm_shop.yy",},},
+    {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"roomId":{"name":"rm_intro","path":"rooms/rm_intro/rm_intro.yy",},},
   ],
   "Folders": [

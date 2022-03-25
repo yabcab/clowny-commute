@@ -71,6 +71,7 @@ switch gentype
 					instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
 					instance_create_depth(obj_player.x + 640 + random_range(-100,100),random_range(50,250),-1,obj_coin)
 				}
+				break;
 			}
 			newplat_oldx = x	
 			newplat_dist = random_range(150,300)
@@ -206,7 +207,7 @@ switch gentype
 			hazard_dist = random_range(400,800)
 		}
 		
-		var choice = choose(1,2,3)
+		var choice = choose(1,2,3,4)
 		switch choice
 		{
 			case 1:
@@ -249,6 +250,20 @@ switch gentype
 				}
 			}
 			break;
+			
+			case 4:
+			{
+
+				if distance_to_point(newplat_oldx,y) > newplat_dist
+				{
+					var yy = random_range(50,300)
+					instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+					instance_create_depth(obj_player.x + 640 + random_range(-50,50),random_range(50,340),-1,obj_bounce)
+					instance_create_depth(obj_player.x + 640 + random_range(-100,100),random_range(50,250),-1,obj_coin)
+					newplat_oldx = x	
+					newplat_dist = random_range(150,350)
+				}
+			}
 		}
 		
 		with obj_background

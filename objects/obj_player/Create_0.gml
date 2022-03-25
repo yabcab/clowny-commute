@@ -9,6 +9,7 @@ coinpitch = 1
 upeffect = 0
 hazardimmune = 0
 milestone_to_reach = 10000
+spd2 = 1
 
 if keyboard_check(ord("Z"))
 {
@@ -26,3 +27,5 @@ audio_stop_sound(sfx_fall)
 bouncing = 0
 saltanim = 0
 bobanim = 0
+
+alarm[2] = 1

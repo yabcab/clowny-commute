@@ -259,7 +259,7 @@ switch select {
 	{
 		name = "Big Ass Trophy"
 		desc = "This does nothing except show how rich you are. Money money money!!"
-		cost = 9999
+		cost = 2500
 		
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
