@@ -20,6 +20,10 @@ if bring_hs
 	hs_off = lerp(hs_off,0,0.5)
 	hs_a = lerp(hs_a,1,0.2)
 }
+if do_nolan
+{
+	nolanoffset = lerp(nolanoffset,-80,0.5)
+}
 
 
 if sel1 = c_lime

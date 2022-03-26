@@ -114,7 +114,7 @@ switch select {
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			//brakingpower = 1
+			nolanterrigino = 1
 			purchased[select] = 1
 		}
 	}
