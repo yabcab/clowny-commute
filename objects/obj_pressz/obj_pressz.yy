@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_presszplaceholder",
-    "path": "sprites/spr_presszplaceholder/spr_presszplaceholder.yy",
+    "name": "spr_pressz",
+    "path": "sprites/spr_pressz/spr_pressz.yy",
   },
   "solid": false,
   "visible": true,

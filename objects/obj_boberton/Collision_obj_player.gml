@@ -42,5 +42,7 @@ if !other.lost
 		hspeed = 20
 		bobanim = 1
 		image_index = 0
+		bouncing = 0
+		saltanim = 0
 	}
 }

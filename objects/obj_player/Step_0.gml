@@ -35,12 +35,12 @@ if going
 	}
 	else
 	{
-		if bouncing
-			sprite_index = spr_player_bounce
-		else if bobanim
+		if bobanim
 			sprite_index = spr_player_bobertonboost
 		else if saltanim
 			sprite_index = spr_player_salt
+		else if bouncing
+			sprite_index = spr_player_bounce
 		else
 			sprite_index = spr_player_inair
 		
@@ -57,6 +57,7 @@ if going
 			hspeed = lerp(hspeed,5,0.1)
 		if keyboard_check_pressed(ord("X")) && backs > 0
 		{
+			bouncing = 0
 			if angrysalt
 			{
 				hazardimmune = 1
@@ -85,8 +86,10 @@ if going
 			if keyboard_check(vk_left)
 			{
 				saltanim = 1
+				bobanim = 0
+				image_index = 0
 				backs--
-				hspeed = -10
+				hspeed = -12
 				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
 				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
 				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(-90,90) }
@@ -123,7 +126,9 @@ if going
 			}
 			else
 			{
-				saltanim = 1
+				saltanim = 0
+				bobanim = 1
+				image_index = 0
 				backs--
 				hspeed = 13
 				with instance_create_depth(x,y,depth - 1,obj_explosionpart) { direction = random_range(90,270) }
