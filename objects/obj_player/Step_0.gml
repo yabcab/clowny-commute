@@ -227,6 +227,7 @@ else
 {
 	hspeed = 0
 	vspeed = 0
+	sprite_index = spr_playerplaceholder2
 	
 	if keyboard_check_pressed(ord("Z"))
 	{

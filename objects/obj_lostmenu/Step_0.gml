@@ -73,4 +73,5 @@ if !control && keyboard_check_pressed(ord("Z"))
 		bring_hs = 1
 	
 	sel1 = c_lime
+	control = 1
 }

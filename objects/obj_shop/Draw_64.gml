@@ -4,6 +4,10 @@ draw_text_outline(52,43,string(coins),1,1,0,c_white,c_black,1,0)
 var item
 for (item = 0; item < sprite_get_number(sprite_index); item++)
 {
+	//pal_swap_set(spr_effectpal,effects.shadow,0)
+	//draw_sprite_ext(sprite_index,item,324 + (item * 80) - scroll,184,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+	//shader_reset()
+	
 	if purchased[item]
 		draw_sprite_ext(sprite_index,item,320 + (item * 80) - scroll,180,1,1,0,c_gray,1)
 	else

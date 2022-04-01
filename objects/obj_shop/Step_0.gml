@@ -224,7 +224,7 @@ switch select {
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			//valubleitems = 1
+			aidang = 1
 			purchased[select] = 1
 		}
 	}

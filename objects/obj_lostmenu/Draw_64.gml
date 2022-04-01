@@ -5,6 +5,11 @@ draw_sprite_ext(spr_lostmenuicons,2,320 - opt3_off,300,1,1,0,sel3,opt3_a)
 draw_sprite_ext(spr_lostmenuicons,3,300 - hs_off,150,1,1,0,c_white,hs_a)
 draw_sprite_ext(spr_nolan,3,10,360 + nolanoffset,1,1,0,c_white,1)
 
+if control
+	draw_text_outline(10,310,"Z: Select\nX: Back",1,1,0,c_white,c_black,1,0)
+else
+	draw_text_outline(10,310,"Z: Skip Sequence",1,1,0,c_white,c_black,1,0)
+
 //if audio_is_playing(va_phil1)
 //	draw_text_outline(320 - (string_width("L + Ratio + No ladybugs + Touch diet pollen popcorn!") / 2),340,"L + Ratio + No ladybugs + Touch diet pollen popcorn!",1,1,0,c_white,c_black,1,0)
 //if audio_is_playing(va_phil2)

@@ -1,6 +1,6 @@
 randomize()
 
-globalvar coins; coins = 999
+globalvar coins; coins = 0
 globalvar max_obj_hits; max_obj_hits = 0
 globalvar can_rightboost; can_rightboost = 0
 globalvar extraboost; extraboost = 0
@@ -15,6 +15,7 @@ globalvar duck; duck = 0
 globalvar canduck; canduck = 0
 globalvar nolanterrigino; nolanterrigino = 0
 globalvar trophy; trophy = 0
+globalvar aidang; aidang = 0
 
 ini_open("save.lmao")
 highscore = ini_read_real("data","highscore",0)
