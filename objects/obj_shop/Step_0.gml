@@ -3,6 +3,11 @@ if keyboard_check_pressed(vk_right)
 if keyboard_check_pressed(vk_left)
 	select--
 	
+if select < 0
+	select = 16
+if select > 16
+	select = 0
+	
 //scroll = select * 80
 if abs(scroll - select * 80) > 1
 	scroll += (select * 80 - scroll) / 5
@@ -108,7 +113,7 @@ switch select {
 	case 6: 
 	{
 		name = "Bearded Ladybug's Glorious Philosophy"
-		desc = "Nolan will say something when you die [p]"
+		desc = "Nolan will say something when you die"
 		cost = 15
 		
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
@@ -264,7 +269,7 @@ switch select {
 		if keyboard_check_pressed(ord("Z")) && coins >= cost && !purchased[select]
 		{
 			coins -= cost
-			//canduck = 1
+			trophy = 1
 			purchased[select] = 1
 		}
 	}

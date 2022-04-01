@@ -14,6 +14,7 @@ globalvar highscore; highscore = 0
 globalvar duck; duck = 0
 globalvar canduck; canduck = 0
 globalvar nolanterrigino; nolanterrigino = 0
+globalvar trophy; trophy = 0
 
 ini_open("save.lmao")
 highscore = ini_read_real("data","highscore",0)

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_deaththings",
-    "path": "sprites/spr_deaththings/spr_deaththings.yy",
+    "name": "spr_jumpie",
+    "path": "sprites/spr_jumpie/spr_jumpie.yy",
   },
   "solid": false,
   "visible": true,
